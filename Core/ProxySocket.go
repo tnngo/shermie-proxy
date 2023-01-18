@@ -4,18 +4,19 @@ import (
 	"crypto/tls"
 	"errors"
 	"fmt"
-	"github.com/kxg3030/shermie-proxy/Log"
 	"io"
 	"net"
 	"strconv"
 	"strings"
 	"time"
+
+	"github.com/tnngo/shermie-proxy/Log"
 )
 
 type ProxySocket struct {
 	ConnPeer
-	target   net.Conn
-	port     string
+	target net.Conn
+	port   string
 }
 
 const (

@@ -10,7 +10,7 @@
 
 - 安装
 ```go
-go get github.com/kxg3030/shermie-proxy
+go get github.com/tnngo/shermie-proxy
 ```
 
 - 监听服务
@@ -21,9 +21,9 @@ import (
 	"bufio"
 	"compress/gzip"
 	"flag"
-	"github.com/kxg3030/shermie-proxy/Core"
-	"github.com/kxg3030/shermie-proxy/Core/Websocket"
-	"github.com/kxg3030/shermie-proxy/Log"
+	"github.com/tnngo/shermie-proxy/Core"
+	"github.com/tnngo/shermie-proxy/Core/Websocket"
+	"github.com/tnngo/shermie-proxy/Log"
 	"io"
 	"net/http"
 	"strings"

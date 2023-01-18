@@ -6,9 +6,6 @@ import (
 	"context"
 	"crypto/tls"
 	"fmt"
-	"github.com/kxg3030/shermie-proxy/Core/Websocket"
-	"github.com/kxg3030/shermie-proxy/Log"
-	"github.com/kxg3030/shermie-proxy/Utils"
 	"io"
 	"io/ioutil"
 	"net"
@@ -18,6 +15,10 @@ import (
 	"strconv"
 	"strings"
 	"time"
+
+	"github.com/tnngo/shermie-proxy/Core/Websocket"
+	"github.com/tnngo/shermie-proxy/Log"
+	"github.com/tnngo/shermie-proxy/Utils"
 )
 
 const ConnectSuccess = "HTTP/1.1 200 Connection Established\r\n\r\n"
@@ -37,8 +38,7 @@ type ProxyHttp struct {
 type ResolveWs func(msgType int, message []byte, wsConn *Websocket.Conn) error
 
 func NewProxyHttp() *ProxyHttp {
-	p := &ProxyHttp{
-	}
+	p := &ProxyHttp{}
 	return p
 }
 

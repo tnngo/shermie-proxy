@@ -3,9 +3,10 @@ package Core
 import (
 	"crypto/tls"
 	"errors"
-	"github.com/kxg3030/shermie-proxy/Log"
 	"io"
 	"net"
+
+	"github.com/tnngo/shermie-proxy/Log"
 )
 
 const TcpServer = "server"

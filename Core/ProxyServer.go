@@ -3,13 +3,14 @@ package Core
 import (
 	"bufio"
 	"fmt"
-	"github.com/kxg3030/shermie-proxy/Contract"
-	"github.com/kxg3030/shermie-proxy/Core/Websocket"
-	"github.com/kxg3030/shermie-proxy/Log"
-	"github.com/viki-org/dnscache"
 	"net"
 	"net/http"
 	"time"
+
+	"github.com/tnngo/shermie-proxy/Contract"
+	"github.com/tnngo/shermie-proxy/Core/Websocket"
+	"github.com/tnngo/shermie-proxy/Log"
+	"github.com/viki-org/dnscache"
 )
 
 type HttpRequestEvent func(request *http.Request)
@@ -110,7 +111,7 @@ func (i *ProxyServer) handle(conn net.Conn) {
 		return
 	}
 	peekHex := fmt.Sprintf("0x%x", peek[0])
-	peer := ConnPeer{server: i, conn: conn, writer: writer, reader: reader,}
+	peer := ConnPeer{server: i, conn: conn, writer: writer, reader: reader}
 	switch peekHex {
 	case "0x47", "0x43", "0x50", "0x4f", "0x44", "0x48":
 		process = &ProxyHttp{ConnPeer: peer}

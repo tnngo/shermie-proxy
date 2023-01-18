@@ -4,12 +4,13 @@ import (
 	"bufio"
 	"compress/gzip"
 	"flag"
-	"github.com/kxg3030/shermie-proxy/Core"
-	"github.com/kxg3030/shermie-proxy/Core/Websocket"
-	"github.com/kxg3030/shermie-proxy/Log"
 	"io"
 	"net/http"
 	"strings"
+
+	"github.com/tnngo/shermie-proxy/Core"
+	"github.com/tnngo/shermie-proxy/Core/Websocket"
+	"github.com/tnngo/shermie-proxy/Log"
 )
 
 func init() {
