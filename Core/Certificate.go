@@ -35,8 +35,8 @@ func NewCertificate() *Certificate {
 func (i *Certificate) Init() error {
 	var err error
 	var certBlock, keyBlock *pem.Block
-	certFile := "./cert.crt"
-	keyFile := "./cert.key"
+	certFile := "./mitmproxy-ca-cert.pem"
+	keyFile := "./mitmproxy-ca.pem"
 	// 如果根证书不存在,则生成
 	if !Utils.FileExist(certFile) {
 		// 生成根pem文件
